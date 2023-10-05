@@ -10,6 +10,7 @@ function App() {
 
   const logo = 'https://i.pinimg.com/originals/8c/20/23/8c20239f1ec5777e42ae627590419576.jpg';
 
+  
   useEffect(()=>{
     const getImage = async () => {
       if(file){
