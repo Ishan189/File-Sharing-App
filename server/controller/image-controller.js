@@ -19,16 +19,14 @@ export const uploadImage = async (request, response) => {
 }
 
 export const downloadImage = async (request, response) => {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = dirname(__filename);
+   
     try {
         const file = await File.findById(request.params.fileId);
-
         file.downloadContent++;
 
         await file.save();
 
-        response.download('https://file-sharing-app-w5if.onrender.com'+file.path, file.name);
+        response.download(file.path, file.name);
     } catch (error) {
         console.error(error.message);
         return response.status(500).json({error: error.message});
