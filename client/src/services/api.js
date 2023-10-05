@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let API_URL = 'http://localhost:8000' || "https://file-sharing-app-w5if.onrender.com";
+let API_URL = 'https://file-sharing-app-w5if.onrender.com' || 'http://localhost:8000'   ;
 
 
 export const uploadFile = async (data) => {
