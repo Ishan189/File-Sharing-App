@@ -6,9 +6,12 @@ export const uploadImage = async (request, response) => {
         path: request.file.path,
         name: request.file.originalname
     }
+    console.log(request.file.path);
+    console.log(request.file.originalname);
+
     try {
         const file = await File.create(fileObj);
-        response.status(200).json({path: `http://localhost:8000/file/${file._id}`});
+        response.status(200).json({path: `https://file-sharing-app-w5if.onrender.com/file/${file._id}`});
     } catch (error) {
         console.error(error.message);
         response.status(500).json({error: error.message});
@@ -16,6 +19,8 @@ export const uploadImage = async (request, response) => {
 }
 
 export const downloadImage = async (request, response) => {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
     try {
         const file = await File.findById(request.params.fileId);
 
@@ -23,7 +28,7 @@ export const downloadImage = async (request, response) => {
 
         await file.save();
 
-        response.download(file.path, file.name);
+        response.download('https://file-sharing-app-w5if.onrender.com'+file.path, file.name);
     } catch (error) {
         console.error(error.message);
         return response.status(500).json({error: error.message});
