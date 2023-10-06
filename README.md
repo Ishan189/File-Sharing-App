@@ -65,4 +65,3 @@ Before getting started, ensure that you have the following prerequisites install
    ```
 
 9. Open your web browser and visit http://localhost:3000 to access this App.
-
