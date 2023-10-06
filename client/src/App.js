@@ -7,8 +7,8 @@ function App() {
   const [result, setResult] = useState('');
 
   const fileInputRef = useRef();
-
-  const logo = 'https://i.pinimg.com/originals/16/46/24/1646243661201a0892cc4b1a64fcbacf.jpg';
+  
+const logo = 'https://i.pinimg.com/originals/8c/20/23/8c20239f1ec5777e42ae627590419576.jpg';
 
   useEffect(()=>{
     const getImage = async () => {
