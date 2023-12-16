@@ -3,7 +3,11 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-image: url('https://i.pinimg.com/originals/8c/20/23/8c20239f1ec5777e42ae627590419576.jpg'); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Text color */
 }
 
 .container {
@@ -14,11 +18,12 @@ body {
 }
 
 .wrapper {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* White shadow for contrast */
   padding: 20px;
   text-align: center;
+  animation: fadeIn 1s ease; /* Fade-in animation */
 }
 
 img {
@@ -26,12 +31,8 @@ img {
   border-radius: 8px 8px 0 0;
 }
 
-h1 {
-  color: #333;
-}
-
-p {
-  color: #666;
+h1, p {
+  color: #fff; /* Text color */
 }
 
 button {
@@ -59,6 +60,7 @@ a {
   color: #007bff;
   text-decoration: none;
   font-size: 14px;
+  color: #fff; /* Link color */
 }
 
 .download-message {
@@ -67,4 +69,13 @@ a {
   background-color: #4caf50;
   color: #fff;
   border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
