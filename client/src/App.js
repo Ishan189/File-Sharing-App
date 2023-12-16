@@ -60,7 +60,7 @@ function App() {
         {result && (
           <div>
             <a href={result} target='_blank'>
-              {result}
+              Download Link: {result}
             </a>
             <button onClick={onDownloadClick}>Download</button>
           </div>
