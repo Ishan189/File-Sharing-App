@@ -3,27 +3,29 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-image: url('https://i.pinimg.com/originals/8c/20/23/8c20239f1ec5777e42ae627590419576.jpg'); /* Replace with your actual image URL */
+  background-image: url('https://i.pinimg.com/originals/8c/20/23/8c20239f1ec5777e42ae627590419576.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff; /* Text color */
-}
-
-.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Center content vertically */
+}
+
 .wrapper {
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* White shadow for contrast */
   padding: 20px;
   text-align: center;
   animation: fadeIn 1s ease; /* Fade-in animation */
+  transform: scale(1.2); /* Zoom effect */
 }
 
 img {
