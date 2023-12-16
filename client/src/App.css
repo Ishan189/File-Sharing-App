@@ -19,21 +19,28 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column; /* Center content vertically */
+  border: 2px solid #333; /* Darker outer border */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow from rounded corners */
+  background-color: #333; /* Darker background for the inner border region */
 }
 
 .wrapper {
   padding: 20px;
   text-align: center;
-  animation: fadeIn 1s ease; /* Fade-in animation */
-  transform: scale(1.2); /* Zoom effect */
+  /* Commented out animation and transform properties */
 }
 
 img {
-  width: 100%;
   border-radius: 8px 8px 0 0;
+  width: 0.000001%; /* This value will not render the image. It's essentially hidden. */
 }
 
-h1, p {
+h1 {
+  color: #ff66b2; /* Pink color for the text */
+}
+
+p {
   color: #fff; /* Text color */
 }
 
@@ -71,13 +78,4 @@ a {
   background-color: #4caf50;
   color: #fff;
   border-radius: 4px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
