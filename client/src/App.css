@@ -54,9 +54,11 @@ input[type='file'] {
 }
 
 a {
+  display: block;
+  margin-top: 10px;
   color: #007bff;
   text-decoration: none;
-  margin-right: 10px;
+  font-size: 14px;
 }
 
 .download-message {
