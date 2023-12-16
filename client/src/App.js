@@ -37,9 +37,19 @@ function App() {
     fileInputRef.current.click();
   };
 
-  const onDownloadClick = () => {
-    // You can trigger the download process here
-    setDownloadMessage('Download in progress...');
+  const onDownloadClick = async () => {
+    try {
+      // Make a request to the server to initiate the download
+      // Replace 'YOUR_DOWNLOAD_API_ENDPOINT' with the actual endpoint
+      await fetch('YOUR_DOWNLOAD_API_ENDPOINT', {
+        method: 'GET',
+      });
+
+      setDownloadMessage('Download complete!');
+    } catch (error) {
+      console.error(error);
+      setDownloadMessage('Error during download. Please try again.');
+    }
   };
 
   return (
