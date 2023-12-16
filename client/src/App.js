@@ -37,19 +37,23 @@ function App() {
     fileInputRef.current.click();
   };
 
-  const onDownloadClick = async () => {
-    try {
-      // Make a request to the server to initiate the download
-      // Replace 'YOUR_DOWNLOAD_API_ENDPOINT' with the actual endpoint
-      await fetch('YOUR_DOWNLOAD_API_ENDPOINT', {
-        method: 'GET',
-      });
+  const onDownloadClick = () => {
+    // Display "Download in progress" message when the Download button is clicked
+    setDownloadMessage('Download in progress...');
 
-      setDownloadMessage('Download complete!');
-    } catch (error) {
-      console.error(error);
-      setDownloadMessage('Error during download. Please try again.');
-    }
+    // Make a request to the server to initiate the download
+    // Replace 'YOUR_DOWNLOAD_API_ENDPOINT' with the actual endpoint
+    fetch('YOUR_DOWNLOAD_API_ENDPOINT', {
+      method: 'GET',
+    })
+      .then(() => {
+        // Download is complete
+        setDownloadMessage('Download complete!');
+      })
+      .catch((error) => {
+        console.error(error);
+        setDownloadMessage('Error during download. Please try again.');
+      });
   };
 
   return (
@@ -69,10 +73,9 @@ function App() {
 
         {result && (
           <div>
-            <a href={result} target='_blank'>
+            <a href={result} target='_blank' onClick={onDownloadClick}>
               Download Link: {result}
             </a>
-            <button onClick={onDownloadClick}>Download</button>
           </div>
         )}
 
