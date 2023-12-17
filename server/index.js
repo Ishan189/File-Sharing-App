@@ -13,7 +13,7 @@ app.use(cookieParser())
 
 connectDB();
 
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: 'file-sharing-app-henna.vercel.app' }));
 
 app.use("/", router);
 
