@@ -21,7 +21,7 @@ connectDB();
 //     next();
 //   });
 
-app.use("/", router);
+app.use("/api", router);
 
 app.use((err,req,res,next)=>{
     const { statusCode = 500 } = err;
