@@ -63,7 +63,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch('https://file-sharing-backend-i8pq.onrender.com/register', {
+      const response = await fetch('/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

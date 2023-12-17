@@ -61,7 +61,7 @@ const Login = () => {
     }
 
     try {
-      const response = await fetch('https://file-sharing-backend-i8pq.onrender.com/login', {
+      const response = await fetch('/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
