@@ -54,7 +54,7 @@ const Login = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    setLoginAttempted(true); // Set loginAttempted to true when attempting login
+    // setLoginAttempted(true); // Set loginAttempted to true when attempting login
 
     if (!validateForm()) {
       return;

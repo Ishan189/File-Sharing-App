@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://file-sharing-backend-i8pq.onrender.com',
+      target: 'http://localhost:8000/',
       changeOrigin: true,
     })
   );
