@@ -40,6 +40,9 @@ export const registerUser = async (request, response) => {
 export const loginUser = async(req,res)=>{
 
     try {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+      res.setHeader('Access-Control-Allow-Headers', 'Authorization, Content-Type');
         
         const {email,password} = req.body
         console.log('hello')
