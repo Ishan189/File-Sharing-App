@@ -1,0 +1,81 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://i.pinimg.com/originals/8c/20/23/8c20239f1ec5777e42ae627590419576.jpg');
+  background-size: cover;
+  background-position: center; /* Adjusted background position */
+  background-repeat: no-repeat;
+  color: #fff; /* Text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* Rest of the styles remain unchanged */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Center content vertically */
+  border: 2px solid #333; /* Darker outer border */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow from rounded corners */
+  background-color: #333; /* Darker background for the inner border region */
+}
+
+.wrapper {
+  padding: 20px;
+  text-align: center;
+  /* Commented out animation and transform properties */
+}
+
+img {
+  border-radius: 8px 8px 0 0;
+  width: 0.000001%; /* This value will not render the image. It's essentially hidden. */
+}
+
+h1 {
+  color: #ff66b2; /* Pink color for the text */
+}
+
+p {
+  color: #fff; /* Text color */
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+a {
+  display: block;
+  margin-top: 20px; /* Adjusted margin-top */
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff; /* Link color */
+}
+
+.download-message {
+  margin-top: 20px; /* Adjusted margin-top */
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 4px;
+}

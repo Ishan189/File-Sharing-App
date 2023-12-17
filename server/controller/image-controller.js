@@ -1,6 +1,7 @@
 import File from "../models/file.js";
 
 
+
 export const uploadImage = async (request, response) => {
     const fileObj = {
         path: request.file.path,
@@ -18,6 +19,9 @@ export const uploadImage = async (request, response) => {
     }
 }
 
+
+
+
 export const downloadImage = async (request, response) => {
    
     try {
@@ -32,3 +36,4 @@ export const downloadImage = async (request, response) => {
         return response.status(500).json({error: error.message});
     }
 }
+
