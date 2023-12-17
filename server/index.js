@@ -1,6 +1,6 @@
 import express from "express";
 import router from "./routes/routes.js";
-// import cors from 'cors'; 
+import cors from 'cors'; 
 import { urlencoded } from "express"
 import connectDB from "./database/db.js";
 import cookieParser from 'cookie-parser'
@@ -13,7 +13,7 @@ app.use(cookieParser())
 
 connectDB();
 
-// app.use(cors({ credentials: true, origin: 'https://file-sharing-app-henna.vercel.app/' }));
+app.use(cors({ credentials: true, origin: '/https://file-sharing-app-henna.vercel.app/' }));
 
 app.use("/", router);
 
