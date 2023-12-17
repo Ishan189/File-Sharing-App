@@ -63,7 +63,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch('/register', {
+      const response = await fetch('https://file-sharing-2pzw1n7bo-ishans-projects-3a67669a.vercel.app/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
