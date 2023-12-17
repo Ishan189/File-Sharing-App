@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/:path*",
+        "destination": "https://file-sharing-backend-i8pq.onrender.com/api/:path*"
+      }
+    ]
+  }
